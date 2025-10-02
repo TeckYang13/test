@@ -1,15 +1,42 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Redirecting...</title>
-    <script>
-      // 跳到 App
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Payment Successful</title>
+  <script>
+    window.onload = function () {
+      // 尝试跳转到 App Deep Link
       window.location.href = "myapp://payment-success";
-      // 如果 App 没安装，3秒后跳到官网或404
-    </script>
-  </head>
-  <body>
-    <p>Redirecting to App...</p>
-  </body>
+
+      // 如果 App 没有安装，则 3 秒后跳转到你的网站首
+    };
+  </script>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+    }
+    .container {
+      text-align: center;
+    }
+    h1 {
+      color: #28a745;
+    }
+    p {
+      margin-top: 10px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>✅ Payment Successful!</h1>
+    <p>Redirecting you to the App...</p>
+    <p>If nothing happens, <a href="myapp://payment-success">click here</a>.</p>
+  </div>
+</body>
 </html>
